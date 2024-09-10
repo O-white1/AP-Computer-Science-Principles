@@ -14,4 +14,6 @@ int main() {
 
     printf("Sum: %d \n", sum);
     printf("Average: %f \n", avg);
+
+    return 0;
 }
