@@ -65,9 +65,12 @@ ___
 
 # 2. Data Types
 
-???
+int, double, char, long double, float
+
+strings are not native to C and thus are to be manipulated as Char arrays.
 
 ```LANGUAGE_HERE
+
 
 ```
 
@@ -83,7 +86,7 @@ ___
 
 # 3. Console I/O
 
-???
+By importing <stdio.h> with ( #include <stdio.h> ) you can get user input via scanf("");
 
 
 
@@ -97,21 +100,13 @@ ___
 
 # 4. Arithmetic Operations
 
-???
-
-
-
-
-
-___
-
-
++, -, *, /, %.
 
 
 
 # 5. Assignment Operations
 
-???
+=, +=, -=. *=, /=, ++.
 
 
 
@@ -124,8 +119,7 @@ ___
 
 
 # 6. Comments
-
-???
+triple quotes """_""" and double slash // both allow comments in C code
 
 
 
@@ -138,8 +132,9 @@ ___
 
 
 # 7. Decision Structures
+ if, else, and else if allow conditions and logic.
 
-???
+As with many other languages, conditions are put in parentheses.()
 
 
 
@@ -152,8 +147,9 @@ ___
 
 
 # 8. Conditional Operators
+==, <, >, >=, <= all work for conditions in C
 
-???
+if (x >= y)
 
 
 
@@ -167,7 +163,7 @@ ___
 
 # 9. Logic Operators
 
-???
+&& for and, || for or, and ! for not allow logic in C.
 
 
 
