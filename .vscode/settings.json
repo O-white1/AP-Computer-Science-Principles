@@ -2,5 +2,6 @@
     "cSpell.words": [
         "codespace",
         "dblcount"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "disabled"
 }
