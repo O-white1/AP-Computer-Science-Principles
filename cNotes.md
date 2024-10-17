@@ -67,9 +67,10 @@ ___
 
 int, double, char, long double, float
 
-strings are not native to C and thus are to be manipulated as Char arrays.
+strings are not native to C and thus are to be manipulated as char arrays.  
 
 ```LANGUAGE_HERE
+*char myString[] =  "Hello!"
 
 
 ```
@@ -86,7 +87,7 @@ ___
 
 # 3. Console I/O
 
-By importing <stdio.h> with ( #include <stdio.h> ) you can get user input via scanf("");
+By importing <stdio.h> with ( #include <stdio.h> ) you can get user input via scanf("");  To use scanf, you must also use format specifiers like %d for integers, %f for float, etc. 
 
 
 
@@ -100,13 +101,14 @@ ___
 
 # 4. Arithmetic Operations
 
-+, -, *, /, %.
++, -, *, /, %, can all be used in C. Things like ** cannot but you
+can get exponents using pow() because the math library is built into C.
 
 
 
 # 5. Assignment Operations
 
-=, +=, -=. *=, /=, ++.
+=, +=, -=. *=, /=, ++, can all be used to change the value or assign the value of something.  Obviously = can only be usd on initial assignment.
 
 
 
@@ -119,7 +121,10 @@ ___
 
 
 # 6. Comments
-triple quotes """_""" and double slash // both allow comments in C code
+/* */ and double slash // both allow comments in C code
+
+You can also use /** for documentation comments.
+
 
 
 
@@ -163,7 +168,9 @@ ___
 
 # 9. Logic Operators
 
-&& for and, || for or, and ! for not allow logic in C.
+&& for and, || for or, and ! for not allow logic operations in C.
+
+These are used for writing conditions just as they are in many other languages.
 
 
 
@@ -176,8 +183,11 @@ ___
 
 
 # 10. Advanced Decision Structures
+Ternary operators can be used in C for logic.
 
-???
+z = (a > b) ? a : b;    
+is the same as     
+z = max(a, b);
 
 
 
@@ -190,8 +200,7 @@ ___
 
 
 # 11. String Methods
-
-???
+There are numerous methods for strings like strtok() which turns a string into an array of tokens.  there are still basic methods for making every character in a string lower or uppercase, but the more C specific methods are best understood by referencing Tutorialspoint.com and The C Programming Language Book by Brian Kernighan and Dennis Ritchie.
 
 
 
@@ -218,8 +227,13 @@ ___
 
 
 # 13. Looping Structures
+Loops in C have 2 flavors, for and while.  For each loops are not supported in C natively.  syntax for looping for every number 1-20 for example would look like 
 
-???
+
+```C
+    
+
+```
 
 
 
