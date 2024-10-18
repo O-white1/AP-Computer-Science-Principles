@@ -65,12 +65,19 @@ ___
 
 # 2. Data Types
 
-int, double, char, long double, float
+int, double, char, float
 
-strings are not native to C and thus are to be manipulated as char arrays.  
+NOTE: there are more data types and specifiers like long, short, const, etc but they do not matter for understanding the basics of C. Pointers exist to manually manage memory and they are 
 
-```LANGUAGE_HERE
-*char myString[] =  "Hello!"
+strings are not native to C and thus are to be manipulated as char arrays (more under the arrays/lists section.)  Variables are declared by type, name, and value as shown below.
+
+```C
+*char myString =  "Hello!"
+// char myString[] = "Hello!"
+int myInteger = 1;
+double myDouble = 1.0; // more accurate than float
+float myFloat = 1.0; // less memory intensive than double
+
 
 
 ```
@@ -183,11 +190,35 @@ ___
 
 
 # 10. Advanced Decision Structures
-Ternary operators can be used in C for logic.
+Ternary operators can be used in C for logic.  While it may be difficult to read at first, it's just a simpler, while admittedly less verbose, way to write conditional logic.
 
 z = (a > b) ? a : b;    
-is the same as     
+is the same as
+
 z = max(a, b);
+
+variable = (condition) ?   if_True :   if_False
+
+
+Additionally, you have switch cases for conditional logic to write it in a different way.  Writing the same code with normal logic, ternary logic, and with switch cases would look as follows: 
+
+```C
+  int main() {
+    int x = 2;
+    int mybool = 0;
+
+    // regular
+    if      (x == 1) {mybool = 1;}
+    else if (x == 2) {mybool = 0;}
+    
+    // ternary
+    mybool = (x == 2) ? 0 : 1;
+
+    // switch case
+    
+  }
+```
+
 
 
 
@@ -231,7 +262,15 @@ Loops in C have 2 flavors, for and while.  For each loops are not supported in C
 
 
 ```C
-    
+    for (int lcv = 0; lcv <= 10; lcv++) {
+      printf("Looping in C x10");
+    }
+
+    int lcv2 = 0;
+    while (lcv <= 10) {
+      printf("Looping in C x10");
+      lcv++;
+    }
 
 ```
 
@@ -246,8 +285,32 @@ ___
 
 
 # 14. Functions/Methods
+Methods are declared by their return type followed by
+their name, arguments in parenthesis for which types must also be specified, and curly braces for the content of them.
+NOTE: while one line loops and if then statements can
+avoid using the braces, this cannot be done for methods.
 
-???
+syntax for methods that calculate and return the output
+of basic math expressions could look as follows:
+
+```C
+int sum(int num1, int num2) {
+  return num1 + num2;
+}
+ // one line: int sum(int a, int b) {return a+b;}
+
+int difference(int num1, int num2) {
+  return num1 - num2;
+}
+
+int product(int num1, int num2) {
+  return num1 * num2;
+}
+
+double quotient(int num1, int num2) {
+  return num1 / num2;
+}
+```
 
 
 
@@ -268,8 +331,24 @@ ___
 
 
 ## 15.1 Arrays/Lists
+Arrays in C for integers is specified simply as it is in other languages, with Type, Name, Value, as shown below.  for strings however it's not so easy.  Java for Example does not have Strings as a native type, rather they are a class object, but in C the syntax is much more expressive about what a string is under the hood.  Strings, just being an array of characters, are written as such.  There are two ways of writing this, as shown below but worth noting is that the pointer based syntax is preferable for instances where you will be controlling the allocated memory more.  The basic "array-like" syntax is easier for some people to understand, but it has less low level functionality.
 
-???
+The length of an array is static, simply meaning it cannot be changed after declaration, but ***lists*** or arrays with dynamic size can be implemented if you build it from scratch; given the skill/knowledge floor to do this, it is not generally recommended.
+
+NOTE: if you want to explicitly declare the length of an array, you do so in the brackets, though this is not technically required.
+
+```C
+int myNums[] = {0, 1, 2, 3}; // defined indices.
+int myNums2[];              // undefined indices.
+
+char  myString[] = "This is my String";
+*char myString2 = "This is my String in the pointer based syntax";
+
+
+char myStringArray[][] = {"string_Array0", "string_Array1"};
+char **myStringArray2 = {"string_Array0", "string_Array1"};
+
+```
 
 
 
@@ -278,8 +357,7 @@ ___
 
 ## 15.2 Matrices
 
-???
-
+Matrices, or multidimensional arrays are defined with the 
 
 
 
