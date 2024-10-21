@@ -56,9 +56,7 @@ ___
 
 # 1. Compiling and Running
 
-
-by using the compile.sh file we have in the codespace, simply type: bash compile.sh {folder / filename without filetype ex: .c }
-Use this for running C programs.
+C programs are compiled before running unlike those in languages like Ruby and Python which are interpreted.  When attempting to run C code you may find that you can't because you don't have a compiler installed.  Different CPU's are structured differently which means that the compiled program needs to be different depending on the computer on which it is running.  This is something that is far more prominent when working in Assembly programming because parts of how you write Assembly are different depending on the processor you are writing it for.  C programs compile into assembly before making an executable file which means that the compilation process is different depending on the computer.  This is why C and C++ programs require you to install a dedicated compiler in order to run them where as anything that runs on the JVM or Java Virtual Machine do not.  The JVM compiles the code directly into machine code so that it doesn't matter what device you're using.  Hence the slogan, Write once, run anywhere.
 
 ___
 
@@ -67,7 +65,7 @@ ___
 
 int, double, char, float
 
-NOTE: there are more data types and specifiers like long, short, const, etc but they do not matter for understanding the basics of C. Pointers exist to manually manage memory and they are 
+NOTE: there are more data types and specifiers like long, short, const, etc but they do not matter for understanding the basics of C. Pointers exist to manually manage memory and they are.
 
 strings are not native to C and thus are to be manipulated as char arrays (more under the arrays/lists section.)  Variables are declared by type, name, and value as shown below.
 
@@ -190,7 +188,7 @@ ___
 
 
 # 10. Advanced Decision Structures
-Ternary operators can be used in C for logic.  While it may be difficult to read at first, it's just a simpler, while admittedly less verbose, way to write conditional logic.
+Ternary operators can be used in C for logic.  While it may be difficult to read at first, it's just a simpler, while admittedly less verbose, way to write conditional logic.  Note that ternary operations can be used in virtually any programming language.
 
 z = (a > b) ? a : b;    
 is the same as
@@ -258,7 +256,7 @@ ___
 
 
 # 13. Looping Structures
-Loops in C have 2 flavors, for and while.  For each loops are not supported in C natively.  syntax for looping for every number 1-20 for example would look like 
+Loops in C have 2 flavors, for and while.  For each loops are not supported in C natively.  syntax for looping for every number 1-20 for example would look like this code below.
 
 
 ```C
@@ -323,8 +321,7 @@ ___
 
 
 # 15. Elementary Data Structures
-
-???
+The most basic data structures in programming that you can use in C are Arrays and Matrices.  Arrays, as covered in the next nextion
 
 
 
@@ -357,7 +354,29 @@ char **myStringArray2 = {"string_Array0", "string_Array1"};
 
 ## 15.2 Matrices
 
-Matrices, or multidimensional arrays are defined with the 
+Matrices, or multidimensional arrays are defined with the typical array syntax but with multiple sets of brackets.  As with typical arrays you can specify the length of the array on definition but are not strictly required to.
+
+Additionally you do not the square brackets if you specify the length.  See myMatrix3 in the code below.
+```C
+int myMatrix[][] = {
+  [0, 1],
+  [0, 1],
+  [0, 1]
+};
+
+int myMatrix2[3][2] = {
+  [0, 1],
+  [0, 1],
+  [0, 1]
+};
+
+int myMatrix3[3][3] = {
+  1,2,3, 1,2,3, 1,2,3
+}
+// one line below.
+// int myMatrix3[3][3] = {1,2,3, 1,2,3, 1,2,3}
+
+```
 
 
 
