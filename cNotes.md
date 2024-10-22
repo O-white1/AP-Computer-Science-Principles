@@ -173,9 +173,23 @@ ___
 
 # 9. Logic Operators
 
-&& for and, || for or, and ! for not allow logic operations in C.
+&& for and, || for or, and ! for not allow logic operations in C.  conditions must be written in parenthesis's as shown in the decision structures section.
 
-These are used for writing conditions just as they are in many other languages.
+The code below shows the difference of the same logic operation in C and in Python.
+
+```Python
+#Python
+def isEqualToOne(a, b):
+  if   a==1: return a
+  else b==1: return b
+```
+```C
+// C
+int isEqualToOne(int a, int b) {
+  if (a==1) return a;
+  else      return b;
+}
+```
 
 
 
@@ -190,15 +204,23 @@ ___
 # 10. Advanced Decision Structures
 Ternary operators can be used in C for logic.  While it may be difficult to read at first, it's just a simpler, while admittedly less verbose, way to write conditional logic.  Note that ternary operations can be used in virtually any programming language.
 
-z = (a > b) ? a : b;    
+z = (a > b) ? a : b;
 is the same as
 
 z = max(a, b);
 
-variable = (condition) ?   if_True :   if_False
+(condition)
+ ? if_True
+ : if_False;
+
+is the same as
+
+if (condition) {if_True;}
+
+else {if_False;}
 
 
-Additionally, you have switch cases for conditional logic to write it in a different way.  Writing the same code with normal logic, ternary logic, and with switch cases would look as follows: 
+Additionally, you have switch cases for conditional logic to write it in a different way.  Writing the same code with normal logic, ternary logic, and with switch cases would look as follows:
 
 ```C
   int main() {
@@ -242,8 +264,16 @@ ___
 
 
 # 12. Random Generation
+By importing the stdio.h header, you can use the rand() method to get an int between zero and the number specified by the percent sign AFTER the parenthesis and an integer.
+To get a random integer between 1-20 would look as follows.
 
-???
+```C
+int main() {
+  int MyNumber = rand()%20;
+  printf("%d", MyNumber);
+}
+
+```
 
 
 
@@ -321,7 +351,7 @@ ___
 
 
 # 15. Elementary Data Structures
-The most basic data structures in programming that you can use in C are Arrays and Matrices.  Arrays, as covered in the next nextion
+The most basic data structures in programming that you can use in C are Arrays and Matrices.  Arrays, as covered in the next section.
 
 
 
