@@ -70,11 +70,10 @@ NOTE: there are more data types and specifiers like long, short, const, etc but 
 strings are not native to C and thus are to be manipulated as char arrays (more under the arrays/lists section.)  Variables are declared by type, name, and value as shown below.
 
 ```C
-*char myString =  "Hello!"
-// char myString[] = "Hello!"
-int myInteger = 1;
-double myDouble = 1.0; // more accurate than float
-float myFloat = 1.0; // less memory intensive than double
+*char  myString  = "Hello!"
+int    myInteger = 1;
+double myDouble  = 1.0;
+float  myFloat   = 1.0;
 
 
 
@@ -142,9 +141,21 @@ ___
 
 
 # 7. Decision Structures
- if, else, and else if allow conditions and logic.
+if Statements can be used for any logic you want to use and can be nested for more advanced logic.  They are written in the order of the word ***if*** followed by a pair of parenthesis where you put the condition followed (usually) by curly braces for the logic if the condition is true.  If something is not true you can specify that something should happen with the word ***else***.
 
-As with many other languages, conditions are put in parentheses.()
+The condition itself can make use of the logic operators of (&& for and), (|| for or), and (! for not).  Examples of these conditions are shown below.
+```C
+int main() {
+  int x = 1;
+  int y = 2;
+
+  if (x==1&&y==2) {
+      printf("Hey");
+  }
+    else if (x==2 )
+  }
+}
+```
 
 
 
@@ -204,22 +215,6 @@ ___
 # 10. Advanced Decision Structures
 Ternary operators can be used in C for logic.  While it may be difficult to read at first, it's just a simpler, while admittedly less verbose, way to write conditional logic.  Note that ternary operations can be used in virtually any programming language.
 
-z = (a > b) ? a : b;
-is the same as
-
-z = max(a, b);
-
-(condition)
- ? if_True
- : if_False;
-
-is the same as
-
-if (condition) {if_True;}
-
-else {if_False;}
-
-
 Additionally, you have switch cases for conditional logic to write it in a different way.  Writing the same code with normal logic, ternary logic, and with switch cases would look as follows:
 
 ```C
@@ -230,12 +225,15 @@ Additionally, you have switch cases for conditional logic to write it in a diffe
     // regular
     if      (x == 1) {mybool = 1;}
     else if (x == 2) {mybool = 0;}
-    
+
     // ternary
     mybool = (x == 2) ? 0 : 1;
 
-    // switch case
-    
+    //Switch cases
+    int x = 2;
+    switch (x) {
+    case 1:printf("Case 1 is executed. \n");  break;
+    case 2:printf("Case 2 is executed. \n");  break;
   }
 ```
 
@@ -365,15 +363,15 @@ The length of an array is static, simply meaning it cannot be changed after decl
 NOTE: if you want to explicitly declare the length of an array, you do so in the brackets, though this is not technically required.
 
 ```C
-int myNums[] = {0, 1, 2, 3}; // defined indices.
+int  myNums[] = {0, 1, 2, 3}; // defined indices.
 int myNums2[];              // undefined indices.
 
 char  myString[] = "This is my String";
-*char myString2 = "This is my String in the pointer based syntax";
+*char myString2  = "This is my String in the pointer based syntax";
 
 
 char myStringArray[][] = {"string_Array0", "string_Array1"};
-char **myStringArray2 = {"string_Array0", "string_Array1"};
+char **myStringArray2  = {"string_Array0", "string_Array1"};
 
 ```
 
@@ -603,3 +601,6 @@ ___ -->
 
 * [Markdown Cheatsheet](https://gist.github.com/jonschlinkert/5854601)
 * [description](http://example.com)
+* [TutorialsPoint](https://www.tutorialspoint.com/cprogramming/index.htm)
+* [The C Programming Language book](https://seriouscomputerist.atariverse.com/media/pdf/book/C%20Programming%20Language%20-%202nd%20Edition%20(OCR).pdf)
+* [Cool Guy](http://danielszelogowski.com/)
