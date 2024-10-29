@@ -69,11 +69,15 @@ NOTE: there are more data types and specifiers like long, short, const, etc but 
 
 strings are not native to C and thus are to be manipulated as char arrays (more under the arrays/lists section.)  Variables are declared by type, name, and value as shown below.
 
+In modern versions of C, 'bool' officially exists as a data type however this was not always the case
+
 ```C
 *char  myString  = "Hello!"
 int    myInteger = 1;
 double myDouble  = 1.0;
 float  myFloat   = 1.0;
+
+bool mybool = false;
 
 
 
