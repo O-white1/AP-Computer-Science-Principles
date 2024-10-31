@@ -1,46 +1,46 @@
-typedef struct Player() {
-    int hp = 0;
-    int dmg = 0;
-    //bool alive = false;
+struct Enemy() {
+    char Name[] = "";
+    int  Hp = 0;
+    int  Dmg = 0;
+    char EnemyNames[][] = {
+        "Goblin",
+        "Dragon",
+        "Vampire",
+        "Giant Rat"
+    }
 };
 
-typedef struct Enemy() {
-    char Name[] = "";
-    int  hp = 0;
-    int  dmg = 0;
-    bool alive = false;
-
+struct Player {
+    int  Hp = 0;
+    int  Dmg = 0;
+    int Choice = 0;
+    int Score = 0;
 };
 
 int RandHp(int limit)  {return rand()%limit;}
 int RandDmg(int limit) {return rand()%limit;}
 
-// void hello() { printf("Hello World"); }
-//int main() {
-//  void (*ptr)() = &hello;
-
-void HandleChoice() {
-    if (choice == 0) baddie->hp -= plr->dmg;
-    else if (choice == 1) {
-        HealAmt = rand()%plr->hp;
-        plr->hp += HealAmt;
-        printf("You healed by %d\tYou're Health is %d", HealAmt, plr->hp);
-    }
-    else if (choice == 3) {
-        printf("COWARD!\nYou Lose! \nScore: %d", score);
-        break;
+void ReviveEnemy() {
+    Enemy.Name = EnemyNames[rand()%4][];
+    Enemy.Hp  = RandHp(50);
+    Enemy.Dmg = RandDmg(10);
 }
 
-}
-bool CheckDeath(struct thing) {
-    if (thing->hp <= 0)
-        return true;
-}
-
-void TakeDamage(int amt, struct thing) {
-    thing->hp -= amt;
+void SetUpPlayer() {
+    Player.Hp  = RandHp(200);
+    Player.Dmg = RandDmg(20);
+    Player.Score = 0;
+    Player.Choice = 0;
 }
 
+void SetUpEnemy() {
+    Enemy.Name  = EnemyNames[rand()%4][];
+    Enemy.Hp    = RandHp(50);
+    Enemy.Dmg   = RandDmg(10);
+}
 
-
-
+void PromptAndChoice() {
+    printf("You see a %s with %d Health and %d attack power!\n", Enemy.Name, Enemy.Hp, Enemy.Dmg);
+    printf("What Do you do?\tAttack(0)\tHeal(1)\tFlee(2)");
+    scanf("%d", &Player.Choice);
+}
