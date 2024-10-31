@@ -1,20 +1,23 @@
 #include "GameHelper.h"
+#include <stdio.h>
 
 int main() {
+    Enemy* Enemy;
+    Player* Player;
     SetUpPlayer();
     SetUpEnemy();
 
     while (Player.Hp > 0) {
-        if (PlayerHp <= 0) break;
+        if (Player.Hp <= 0) break;
 
         if (Enemy.Hp <= 0) {
-            score += 1;
+            Player.Score += 1;
             SetUpEnemy();
             PromptAndChoice();
         }
         else PromptAndChoice();
         PromptAndChoice();
-        if (Player.Choice==0) Enemy.Hp -= Player.Dmg;\
+        if (Player.Choice==0) Enemy.Hp -= Player.Dmg;
         if (Player.Choice==1) {
             Player.Hp += RandHp(Player.Hp);
         }

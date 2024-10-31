@@ -1,4 +1,4 @@
-struct Enemy() {
+typedef struct Enemy() {
     char Name[] = "";
     int  Hp = 0;
     int  Dmg = 0;
@@ -10,9 +10,9 @@ struct Enemy() {
     }
 };
 
-struct Player {
-    int  Hp = 0;
-    int  Dmg = 0;
+typedef struct Player {
+    int Hp = 0;
+    int Dmg = 0;
     int Choice = 0;
     int Score = 0;
 };
