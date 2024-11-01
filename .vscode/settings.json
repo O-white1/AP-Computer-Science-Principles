@@ -3,10 +3,12 @@
         "codespace",
         "dblcount",
         "Kernighan",
+        "scontained",
         "totient"
     ],
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "string.h": "c"
     }
 }
