@@ -1,5 +1,5 @@
 typedef struct Enemy {
-    *char Name = "";
+    char Name[] = "";
     int  Hp = 0;
     int  Dmg = 0;
     char EnemyNames[][] = {
