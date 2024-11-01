@@ -2,7 +2,11 @@
     "cSpell.words": [
         "codespace",
         "dblcount",
-        "Kernighan"
+        "Kernighan",
+        "totient"
     ],
-    "C_Cpp.errorSquiggles": "disabled"
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "stdio.h": "c"
+    }
 }
