@@ -4,6 +4,7 @@
         "dblcount",
         "Kernighan",
         "scontained",
+        "strint",
         "totient"
     ],
     "C_Cpp.errorSquiggles": "disabled",
