@@ -3,7 +3,10 @@
         "codespace",
         "dblcount",
         "decomp",
+        "figsize",
+        "imshow",
         "Kernighan",
+        "probs",
         "scontained",
         "strint",
         "totient"
