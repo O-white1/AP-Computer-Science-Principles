@@ -6,7 +6,9 @@
         "figsize",
         "imshow",
         "Kernighan",
+        "ncols",
         "probs",
+        "recip",
         "scontained",
         "strint",
         "totient"
