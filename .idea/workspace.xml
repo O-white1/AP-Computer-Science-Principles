@@ -12,7 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b21682c9-fe71-44a4-bb3f-54f5c0328f23" name="Changes" comment="12/11">
+    <list default="true" id="b21682c9-fe71-44a4-bb3f-54f5c0328f23" name="Changes" comment="12/12/2024">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NoteBooks/Concepts.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/NoteBooks/Concepts.ipynb" afterDir="false" />
     </list>
@@ -92,7 +92,8 @@
       <workItem from="1728572032093" duration="175000" />
       <workItem from="1733845802960" duration="1238000" />
       <workItem from="1733932059672" duration="2301000" />
-      <workItem from="1734018333652" duration="336000" />
+      <workItem from="1734018333652" duration="604000" />
+      <workItem from="1734018988780" duration="697000" />
     </task>
     <task id="LOCAL-00001" summary="12/11">
       <option name="closed" value="true" />
@@ -102,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733935279746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="12/12/2024">
+      <option name="closed" value="true" />
+      <created>1734018909609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734018909609</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="12/11" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/11" />
+    <MESSAGE value="12/12/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/12/2024" />
   </component>
 </project>
