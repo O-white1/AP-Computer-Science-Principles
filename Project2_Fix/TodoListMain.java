@@ -1,9 +1,7 @@
-package TodoList(Project 2);
+package Project2_Fix;
 
-
-import java.awt.*;
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TodoListMain {
     public static void sort(ArrayList<Item> list) {
@@ -11,13 +9,14 @@ public class TodoListMain {
         for (int lcv = 0; lcv < list.size()-1; lcv++) {
             if (copy[lcv].myPriority<(copy[lcv+1].myPriority)) {
                 Item temp = list.get(lcv);
-                Item i1 = list.get(lcv);
+                //Item i1 = list.get(lcv);
                 Item i2 = list.get(lcv+1);
                 list.set(lcv, i2);
                 list.set(lcv+1, temp);
             }
         }
     }
+
     public static void main(String[] args) {
         ArrayList<Item> list = new ArrayList<>();
         Scanner input = new Scanner(System.in);
@@ -50,9 +49,9 @@ public class TodoListMain {
                 System.out.println("____________");
             }
             if (decision==4) {
+                input.close();
                 return;
             }
         }
     }
 }
-

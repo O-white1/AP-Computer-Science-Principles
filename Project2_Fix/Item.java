@@ -1,4 +1,4 @@
-package TodoList(Project 2);
+package Project2_Fix;
 
 public class Item {
     String myName;
@@ -10,5 +10,4 @@ public class Item {
         myDate = date;
         myPriority = priority;
     }
-
 }
