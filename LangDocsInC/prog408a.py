@@ -1,9 +1,9 @@
-# Import time, your sorting library, and your helper class
+import SortingLibrary as sl
 import time as t
 
 class Thing():
-    id    = 0;
-    score = 0;
+    id = 0
+    score = 0
 
     def __init__(self, id, score):
         self.id    = id
