@@ -25,9 +25,9 @@ class TestCalc(unittest.TestCase):
 
 
 """
-    def tearDown(self):
-        t = current_time() - self.startTime
-        print(f"{self.id()}: {t:6f}")
+def tearDown(self):
+    t = current_time() - self.startTime
+    print(f"{self.id()}: {t:6f}")
 
 
 
