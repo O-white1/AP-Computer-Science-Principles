@@ -1,17 +1,28 @@
 {
     "cSpell.words": [
+        "barlabel",
+        "barplot",
         "codespace",
         "dblcount",
         "decomp",
         "figsize",
+        "fontsize",
+        "histplot",
         "imshow",
         "Kernighan",
+        "multivector",
         "ncols",
         "probs",
         "recip",
+        "scatterplot",
         "scontained",
+        "statevector",
         "strint",
-        "totient"
+        "suptitle",
+        "totient",
+        "xlabel",
+        "xticks",
+        "ylabel"
     ],
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
