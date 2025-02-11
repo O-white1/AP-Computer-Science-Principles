@@ -7,6 +7,7 @@
         "decomp",
         "figsize",
         "fontsize",
+        "gapminder",
         "histplot",
         "imshow",
         "Kernighan",
