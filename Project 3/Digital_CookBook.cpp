@@ -9,7 +9,7 @@ using namespace std;
 vector<Recipe> recipes;
 
 void NewRecipe() {
-    string name;
+    char* name;
     vector<Ingredient> ingredients;
     int ingredientAmount = 0;
     printf("Enter the name of the recipe:\n"); scanf("%s", name);
