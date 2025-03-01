@@ -1,5 +1,6 @@
 //#pragma once
 #include <stdio.h>
+#include <iostream>
 #include <string>
 #include <vector>
 
@@ -9,37 +10,45 @@ using namespace std;
 vector<Recipe> recipes;
 
 void NewRecipe() {
-    char* name;
+    string name;
+    int ingredientAmount;
     vector<Ingredient> ingredients;
-    int ingredientAmount = 0;
-    printf("Enter the name of the recipe:\n"); scanf("%s", name);
-    printf("Enter the number of ingredients:\n"); scanf("%d", &ingredientAmount);
+
+    cout << "Enter Name of Recipe: ";  //cin >>  name; // NO SPACE
+    cout << "Enter Number of Ingredients: ";cin >> ingredientAmount;
+
     for (int i = 0; i < ingredientAmount; i++) {
         string n;
         int amount;
-        printf("Ingredient %d name: ", i); scanf("%s", n);
-        printf("Ingredient %d amount: ", i); scanf("%d", &amount);
-        ingredients.emplace_back(n, amount); // automatically constructs Ingredient with params
+        cout << "Enter ingredient name: "; cin >> n; //TODO: SAME AS ABOVE
+        cout << "Enter ingredient amount: "; cin >> amount;
+        ingredients.emplace_back(n, amount);
     }
-    recipes.emplace_back(name, ingredients);
+    recipes.emplace_back(name.data(), ingredients);
 }
 void ShowRecipes() {
-    for (Recipe r : recipes) {
-        r.printMe();
+    for (int i = 0; i < recipes.size(); i++) {
+        printf("Recipe #%d:\n", i+1);
+        recipes[i].printMe();
     }
 }
 void DeleteRecipe() {
-    printf("Which recipe would you like to delete? (by index number)");
-    int recipeIndex = 0; scanf("%d", &recipeIndex);
+    cout << "Which recipe would you like to delete? (by Recipe Number)";
+    int recipeIndex = 0; cin >> recipeIndex; recipeIndex--;
     recipes.erase(recipes.begin() + recipeIndex);
+
+}
+void myFunc() {
+    int choice;
+    cout << "(1)New Recipe\n(2)Show Recipes\n(3)Delete Recipe\n(4)Quit\n";
+    cin >> choice;
+    if (choice == 1) {NewRecipe();myFunc();}
+    if (choice == 2) {ShowRecipes();myFunc();}
+    if (choice == 3) {DeleteRecipe();myFunc();}
+    if (choice == 4) {exit(0);}
 }
 
+
 int main() {
-    int choice;
-    printf("(1)New Recipe\n(2)Show Recipes\n(3)Delete Recipe\n(4)Quit");
-    scanf("%d", &choice);
-    if (choice == 1) {NewRecipe();}
-    if (choice == 2) {ShowRecipes();}
-    if (choice == 3) {DeleteRecipe();}
-    else exit(0);
+    myFunc();
 }
