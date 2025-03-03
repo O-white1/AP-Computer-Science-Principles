@@ -1,4 +1,3 @@
-//#pragma once
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -6,6 +5,7 @@
 
 #include "Ingredient.h"
 #include "Recipe.h"
+
 using namespace std;
 vector<Recipe> recipes;
 
@@ -14,24 +14,26 @@ void NewRecipe() {
     int ingredientAmount;
     vector<Ingredient> ingredients;
 
-    cout << "Enter Name of Recipe: ";  //cin >>  name; // NO SPACE
-    cout << "Enter Number of Ingredients: ";cin >> ingredientAmount;
+    cout << "Enter Name of Recipe: "; cin.ignore();getline(cin, name);
+    cout << "Enter Number of Ingredients: "; cin >> ingredientAmount;
 
     for (int i = 0; i < ingredientAmount; i++) {
         string n;
         int amount;
-        cout << "Enter ingredient name: "; cin >> n; //TODO: SAME AS ABOVE
+        cout << "Enter ingredient name: "; cin >> n;
         cout << "Enter ingredient amount: "; cin >> amount;
         ingredients.emplace_back(n, amount);
     }
     recipes.emplace_back(name.data(), ingredients);
 }
+
 void ShowRecipes() {
     for (int i = 0; i < recipes.size(); i++) {
         printf("Recipe #%d:\n", i+1);
         recipes[i].printMe();
     }
 }
+
 void DeleteRecipe() {
     cout << "Which recipe would you like to delete? (by Recipe Number)";
     int recipeIndex = 0; cin >> recipeIndex; recipeIndex--;
@@ -47,7 +49,6 @@ void myFunc() {
     if (choice == 3) {DeleteRecipe();myFunc();}
     if (choice == 4) {exit(0);}
 }
-
 
 int main() {
     myFunc();
