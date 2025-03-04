@@ -20,7 +20,7 @@ void NewRecipe() {
     for (int i = 0; i < ingredientAmount; i++) {
         string n;
         int amount;
-        cout << "Enter ingredient name: "; cin >> n;
+        cout << "Enter ingredient name: "; cin.ignore(); getline(cin, n);
         cout << "Enter ingredient amount: "; cin >> amount;
         ingredients.emplace_back(n, amount);
     }
