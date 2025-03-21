@@ -1,6 +1,4 @@
-import java.util.Random;
-
-public abstract class Enemy extends Entity {
+public abstract class Enemy<T> extends Entity {
     public Enemy(int hp) {
         super(hp);
     }
