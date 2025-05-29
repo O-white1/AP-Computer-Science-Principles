@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int n;
-    // for all prime factors up to n, multiply
-    // (1+1/p) where p is the prime factor
-    printf("Enter Number: "); scanf("%d", n);
-
-
-
-    int out = 1;
-    for (int lcv = n; lcv > 1;) { // change lcv to skip non primes
-        int p;
-
-
-
-        out*=(1+1/p);
+iint main() {
+    int num = 0;
+    printf("Enter Number: "); scanf("%d", &num);
+    if (num>1) {
+        int out = 0;
+        int[num] used;
+        for (int lcv = 0; lcv <= num; lcv++) {
+           if (isPrime(lcv)==0) printf("%d", lcv);
+        }
     }
 }
+
+int isPrime(int n) {
+    for (int i = 2; i < n; i++) {
+        if ((n % i == 0) && (i != n))
+            return 1;
+    }
+    return 0;
+}
+
